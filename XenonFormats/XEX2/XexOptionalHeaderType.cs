@@ -1,0 +1,38 @@
+﻿namespace XenonFormats
+{
+    public enum XexOptionalHeaderType
+    {
+        ResourceInfo = 0x2ff,
+        FileFormatInfo = 0x3ff,
+        BaseReference = 0x405,
+        DeltaPatchDescriptor = 0x5ff,
+        DiscProfileID = 0x4304,
+        BoundingPath = 0x80ff,
+        DeviceId = 0x8105,
+        OriginalBaseAddress = 0x10001,
+        EntryPoint = 0x10100,
+        ImageBaseAddress = 0x10201,
+        ImportLibraries = 0x103ff,
+        ChecksumTimestamp = 0x18002,
+        EnabledForCallcap = 0x18102,
+        EnabledForFastcap = 0x18200,
+        OriginalPeName = 0x183ff,
+        StaticLibraries = 0x200ff,
+        TlsInfo = 0x20104,
+        DefaultStackSize = 0x20200,
+        DefaultFsCacheSize = 0x20301,
+        DefaultHeapSize = 0x20401,
+        PageHeapSizeAndFlags = 0x28002,
+        SystemFlags = 0x30000,
+        ExecutionId = 0x40006,
+        ServiceIdList = 0x401ff,
+        TitleWorkspaceSize = 0x40201,
+        GameRatings = 0x40310,
+        LanKey = 0x40404,
+        Xbox360Logo = 0x405ff,
+        MultidiscMediaIds = 0x406ff,
+        AlternateTitleIds = 0x407ff,
+        AdditionalTitleMemory = 0x40801,
+        ExportsByName = 0xe10402,
+    }
+}
