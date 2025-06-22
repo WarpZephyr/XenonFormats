@@ -23,7 +23,7 @@ namespace XenonFormats
 
         internal XexStaticLibrary(BinaryStreamReader br)
         {
-            Name = br.ReadASCII(8);
+            Name = br.ReadASCII(8).Replace("\0", string.Empty);
             MajorVersion = br.ReadUInt16();
             MinorVersion = br.ReadUInt16();
             Build = br.ReadUInt16();

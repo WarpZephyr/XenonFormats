@@ -1,4 +1,5 @@
 ﻿using Edoke.IO;
+using System;
 
 namespace XenonFormats
 {
@@ -17,5 +18,18 @@ namespace XenonFormats
 
         public override readonly string ToString()
             => $"{A}{B}{ID}";
+
+        public readonly int ToInt32()
+            => BitConverter.IsLittleEndian ?
+            ((ID << 16) | (((byte)B) << 8) | ((byte)A)) :
+            ((((byte)A) << 24) | (((byte)B) << 16) | ID);
+
+        public readonly uint ToUInt32()
+            => (uint)(BitConverter.IsLittleEndian ?
+            ((ID << 16) | (((byte)B) << 8) | ((byte)A)) :
+            ((((byte)A) << 24) | (((byte)B) << 16) | ID));
+
+        public readonly string ToHex()
+            => HexHelper.ToHex(A, B, ID);
     }
 }
