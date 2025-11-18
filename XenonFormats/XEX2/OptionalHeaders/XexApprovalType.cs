@@ -7,6 +7,8 @@
         Approved,
         Expired,
 
-        Unk64 = 64
+        Unk4 = 4,
+        Unk64 = 64,
+        Unk68 = 68
     }
 }
